@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development do
   gem 'web-console', '~> 2.0'
+  gem 'guard-rspec', require: false
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -24,3 +25,4 @@ gem 'capybara'
 end
 
 gem 'pg'
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
