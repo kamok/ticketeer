@@ -5,14 +5,14 @@
 			prohibited this ticket from being saved:</h2>
 
 			<ul>
-			<% @ticket.errors.full_message.each do |msg| %>
-				<li><%= msg %></li>
-			<% end %>
+				<% @ticket.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
 			</ul>
 		</div>
 	<% end %>
 
-	<p>
+	<p>	
 		<%=	f.label :title %><br>
 		<%= f.text_field :title %>
 	</p>
@@ -23,4 +23,3 @@
 
 	<%= f.submit %>
 <% end %>
-
