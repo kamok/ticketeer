@@ -1,5 +1,7 @@
 <%= link_to "New Project", new_project_path %>
-
+<nav>
+	<%= link_to "Sign up", new_user_path %> 
+</nav>
 <h2>Projects</h2>
 <ul>
 	<% @projects.each do |project| %>
