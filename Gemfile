@@ -26,3 +26,4 @@ end
 
 gem 'pg'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem 'bcrypt-ruby', '3.1.5', :require => 'bcrypt'
