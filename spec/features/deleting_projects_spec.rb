@@ -1,6 +1,10 @@
 require 'rails_helper.rb'
+require 'helpers/authentication_helpers'
 
 feature "Deleting projects" do
+  before do
+    sign_in_as!(FactoryGirl.create(:admin_user))
+  end
   scenario "Deleting a project" do
     FactoryGirl.create(:project, name: "TextMate 2")
 
