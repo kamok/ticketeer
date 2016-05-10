@@ -1,7 +1,9 @@
 require 'rails_helper'
+require 'helpers/authentication_helpers'
 
 feature 'Creating Projects' do
   before do
+    sign_in_as!(FactoryGirl.create(:admin_user))
     visit '/'
 
     click_link 'New Project'
