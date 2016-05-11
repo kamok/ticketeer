@@ -8,6 +8,7 @@ feature "Signing in" do
     click_link 'Sign in'
     fill_in 'Name', with: user.name
     fill_in 'Password', with: user.password
+    fill_in 'Email', with: user.email
     click_button "Log in"
 
     expect(page).to have_content("Signed in successfully.")
