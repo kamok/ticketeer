@@ -3,7 +3,7 @@ module AuthenticationHelpers
     visit '/signin'
     fill_in "Name", with: user.name
     fill_in "Password", with: user.password
-    click_button 'Sign in'
+    click_button 'Log in'
     expect(page).to have_content("Signed in successfully.")
   end
 
